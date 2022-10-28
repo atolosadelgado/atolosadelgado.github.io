@@ -22,7 +22,10 @@ copyright = '2022, Alvaro Tolosa Delgado'
 author = 'Alvaro Tolosa Delgado'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+# The short X.Y version.
+version = '0.0'
+# The full version, including alpha/beta/rc tags.
+release = '0.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,6 +34,10 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'myst_parser',
+    'sphinx_rtd_theme',
+    'sphinx_togglebutton',
+    'sphinx_copybutton'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -53,3 +60,55 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+#
+# source_suffix = ['.rst', '.md']
+
+source_suffix = ['.rst', '.md']
+
+# The encoding of source files.
+#
+# source_encoding = 'utf-8-sig'
+
+# The master toctree document.
+master_doc = 'index'
+
+
+# There are two options for replacing |today|: either, you set today to some
+# non-false value, then it is used:
+#
+# today = ''
+#
+# Else, today_fmt is used as the format for a strftime call.
+#
+# today_fmt = '%B %d, %Y'
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This patterns also effect to html_static_path and html_extra_path
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# The reST default role (used for this markup: `text`) to use for all
+# documents.
+#
+# default_role = None
+
+# If true, '()' will be appended to :func: etc. cross-reference text.
+#
+# add_function_parentheses = True
+
+# If true, the current module name will be prepended to all description
+# unit titles (such as .. function::).
+#
+# add_module_names = True
+
+# If true, sectionauthor and moduleauthor directives will be shown in the
+# output. They are ignored by default.
+#
+# show_authors = False
+
+# The name of the Pygments (syntax highlighting) style to use.
+# pygments_style = 'sphinx'
