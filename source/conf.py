@@ -117,12 +117,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The name of the Pygments (syntax highlighting) style to use.
 # pygments_style = 'sphinx'
 
-html_context = {
-    'display_github': True,
-    'github_user': 'HEP-FCC',
-    'github_repo': 'fcc-tutorials',
-    'github_version': 'master/',
-}
+# html_context = {
+#     'display_github': True,
+#     'github_user': 'HEP-FCC',
+#     'github_repo': 'fcc-tutorials',
+#     'github_version': 'master/',
+# }
 
 myst_enable_extensions = [
     "dollarmath",
