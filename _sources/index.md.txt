@@ -1,11 +1,7 @@
 # Welcome to Tips and tricks at CERN!
 ===================================================
 
-Tips and tricks at CERN documentation master file, created by sphinx-quickstart on Thu Oct 27 14:36:14 2022.
-
-To build html, 
-
-sphinx-build -b html source .
+This page gather those little tips and tricks that friends and coleagues showed me over this time. 
 
 ```{eval-rst}
 .. toctree::
