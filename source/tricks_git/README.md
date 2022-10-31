@@ -6,13 +6,12 @@ This page gather those little tips and tricks that friends and coleagues showed 
 
 ```{eval-rst}
 .. toctree::
-    :numbered:
-    :maxdepth: 3
+    :maxdepth: 0
     :includehidden:
     :caption: Contents:
 
     tricks_git_workflow/README.md
-    tricks_git_toolss/README.md
+    tricks_git_tools/README.md
 
 ```
 

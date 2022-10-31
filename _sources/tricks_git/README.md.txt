@@ -2,9 +2,16 @@
 
 Git tricks go here :)
 
-Let's start creating a branch with 
+This page gather those little tips and tricks that friends and coleagues showed me over this time. 
 
-git branch test
-git checkout test
+```{eval-rst}
+.. toctree::
+    :maxdepth: 0
+    :includehidden:
+    :caption: Contents:
 
-edit this file, commit, and merge with main branch. Lets see how it goes...
+    tricks_git_workflow/README.md
+    tricks_git_tools/README.md
+
+```
+
