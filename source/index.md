@@ -6,7 +6,7 @@ This page gather those little tips and tricks that friends and coleagues showed 
 ```{eval-rst}
 .. toctree::
     :numbered:
-    :maxdepth: 3
+    :maxdepth: 1
     :includehidden:
     :caption: Contents:
 

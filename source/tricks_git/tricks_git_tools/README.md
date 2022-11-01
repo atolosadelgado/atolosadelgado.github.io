@@ -1,4 +1,4 @@
-## Git tools
+# Git tools
 
 Ancillary tools for git are tig, git gui. They are available in linux repos. The tig command shows the git logs, and a git alias can be used instead. As git client, git gui is one of many, check others as well!
 
