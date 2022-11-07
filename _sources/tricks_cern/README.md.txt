@@ -19,7 +19,7 @@ Keep in mind that `cvmfs` service can be enabled in the main machine, and then u
 Software in `cvmfs` is compiled for a variety of environments (OS + compiler),
 
 ```shell
-ls /cvmfs/sft.cern.ch/lcg/views/dev4/latest/
+$ ls /cvmfs/sft.cern.ch/lcg/views/dev4/latest/
 aarch64-centos7-gcc11-opt   x86_64-centos7-gcc7-opt
 arm64-mac12-clang131-opt    x86_64-centos7-gcc8-dbg
 arm64-mac12-clang140-opt    x86_64-centos7-gcc8-opt
