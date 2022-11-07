@@ -10,6 +10,7 @@ This page gather those little tips and tricks that friends and coleagues showed 
     :includehidden:
     :caption: Contents:
 
+    tricks_cern/README.md
     tricks_linux/README.md
     tricks_git/README.md
 

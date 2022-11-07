@@ -14,6 +14,13 @@ git checkout -b my-new-branch
 4. Edit or add files (`git add ...`), commit and push them to the dedicated branch that was created in the previous step. The git client `git gui` is one of the many tools to visualize and simplify this step.
 5. Back in the web brower, go the working branch and ask for a pull / merge request to the upstream(main) branch. Add meaninful comments in the description for the reviewers.
 
+## Dry run
+
+Remember that exist a dry run option when pushing 
+
+```
+git push --dry-run remote origin
+```
 
 ## Keep your fork synchronized with upstream
 
@@ -39,6 +46,36 @@ git rebase upstream/master
 
 Check [github documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) for futher details.
 
+
+## Amending last commit
+
+There are two steps:
+* Use `git gui`, o terminal to amend last commit as
+```shell
+git commit --amend --author="John Doe <john@doe.org>"
+```
+* When pushing, add the following flag,
+```shell
+git push  --force-with-lease
+```
+
+Check [this link](https://www.git-tower.com/learn/git/faq/change-author-name-email) for further details about amending a commit.
+
+## Stashing your work
+
+The content is a summary of [this page](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+
+Stashing means to save the changes of staged and unstaged files apart, and revert the repository to the last commit. 
+```shell
+git stash
+# rebase/update/whatever
+git stash pop
+```
+
+The last command `git stash pop` will apply and delete the stashed change reference from the local repo. If the changes must be applied to several branches, other option can be used: `git stash apply`, which keeps that reference and allow reusing it.
+
+If untracked files shall be included in the stash reference, use the additional flag `git stash -u`. If ignored files shall be included, use the additional flag `git stash -a`.
+
 ## Patching
 
 When rebasing to the upstream/master branch, we may find merge conflicts. If they are simple, we may solve them manually. Sometimes it is easier to make a patch, that is, save the differences between your personal version and the remote version in a *patch file*, and apply the changes later.
@@ -62,10 +99,3 @@ git am file.patch
 ```
 And then commmit and push the changes to the remote branch.
 
-## Dry run
-
-Remember that exist a dry run option when pushing 
-
-```
-git push --dry-run remote origin
-```
