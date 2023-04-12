@@ -1,5 +1,11 @@
 # Tricks at CERN
 
+* [CVMFS](#cvmfs)
+
+* [Cern Virtual Machine](#cernvm)
+
+* [Cern docker images](#cern-docker-images)
+
 ## CVMFS
 
 Precompiled software is available in the read-only service `cvmfs`. Service can be installed during the installation of the operative system in case of CERN CentOS, or manually afterwards, installing the `locmap` packages and then enabling that service. Visit the [webpage](https://linux.web.cern.ch/centos7/docs/locmap/) for further details.
