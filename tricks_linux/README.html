@@ -48,12 +48,27 @@
 <p>Table of tricks :)</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#comparing-directories-or-files"><span class="std std-doc">Comparing directories or files</span></a></p></li>
+<li><p><a class="reference internal" href="#workaround-alias"><span class="std std-doc">Workaround alias</span></a></p></li>
 <li><p><a class="reference internal" href="#find-command-with-exec-argument"><span class="std std-doc">Find command with exec argument</span></a></p></li>
 <li><p><a class="reference internal" href="#encapsulate-sourcing-of-scripts"><span class="std std-doc">Encapsulate sourcing of scripts</span></a></p></li>
 <li><p><a class="reference internal" href="#pomodoros-and-remind-function"><span class="std std-doc">Pomodoros and remind function</span></a></p></li>
 </ul>
+<section id="workaround-alias">
+<h2><span class="section-number">2.1. </span>Workaround alias<a class="headerlink" href="#workaround-alias" title="Permalink to this heading"></a></h2>
+<p>Including a backslash in the middle of the word of a command prevents bash to use the alias</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">alias</span> <span class="s1">&#39;python3=echo kk&#39;</span>
+$ python3
+kk
+$ py<span class="se">\t</span>hon3
+Python <span class="m">3</span>.6.8 <span class="o">(</span>default, Jun <span class="m">23</span> <span class="m">2022</span>, <span class="m">19</span>:01:59<span class="o">)</span>
+<span class="o">[</span>GCC <span class="m">8</span>.5.0 <span class="m">20210514</span> <span class="o">(</span>Red Hat <span class="m">8</span>.5.0-13<span class="o">)]</span> on linux
+Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</section>
 <section id="comparing-directories-or-files">
-<h2><span class="section-number">2.1. </span>Comparing directories or files,<a class="headerlink" href="#comparing-directories-or-files" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.2. </span>Comparing directories or files,<a class="headerlink" href="#comparing-directories-or-files" title="Permalink to this heading"></a></h2>
 <p>Linux tools useful when dealing with git local repos:</p>
 <ul class="simple">
 <li><p>For comparing directories use meld command.</p></li>
@@ -61,14 +76,14 @@
 </ul>
 </section>
 <section id="find-command-with-exec-argument">
-<h2><span class="section-number">2.2. </span>Find command with exec argument<a class="headerlink" href="#find-command-with-exec-argument" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.3. </span>Find command with exec argument<a class="headerlink" href="#find-command-with-exec-argument" title="Permalink to this heading"></a></h2>
 <p>When initializing a local repository, we may need to add files with certain pattern. For that, we can use exec option of find command as this:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;*.cpp&quot;</span> -not -name <span class="s2">&quot;**.py*&quot;</span>  -exec git add <span class="o">{}</span> <span class="se">\;</span>
 </pre></div>
 </div>
 </section>
 <section id="encapsulate-sourcing-of-scripts">
-<h2><span class="section-number">2.3. </span>Encapsulate sourcing of scripts<a class="headerlink" href="#encapsulate-sourcing-of-scripts" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.4. </span>Encapsulate sourcing of scripts<a class="headerlink" href="#encapsulate-sourcing-of-scripts" title="Permalink to this heading"></a></h2>
 <p>I used to put the source of different packages in <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>. This is a bad idea by several reasons</p>
 <ul class="simple">
 <li><p>You may have to switch between versions of software</p></li>
@@ -111,7 +126,7 @@ pip install -r ...
 </div>
 </section>
 <section id="pomodoros-and-remind-function">
-<h2><span class="section-number">2.4. </span>Pomodoros and remind function<a class="headerlink" href="#pomodoros-and-remind-function" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.5. </span>Pomodoros and remind function<a class="headerlink" href="#pomodoros-and-remind-function" title="Permalink to this heading"></a></h2>
 <p>Example of linux custom notifications. The remind custom function, taken from <a class="reference external" href="https://letsdebug.it/post/30-linux-desktop-notifications/">here</a>, it is useful to remind you to get up the chair and walk around :)</p>
 <p>You can put this piece of sh code in bash configuration file <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>, profile, or bin directory together with other scripts.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">pomodoro25</span><span class="o">=</span><span class="s1">&#39;remind &quot;Time to \&quot;exercise\&quot;!&quot; in 25 minutes&#39;</span>

@@ -3,11 +3,25 @@
 Table of tricks :)
 
 * [Comparing directories or files](#comparing-directories-or-files)
+* [Workaround alias](#workaround-alias)
 * [Find command with exec argument](#find-command-with-exec-argument)
 * [Encapsulate sourcing of scripts](#encapsulate-sourcing-of-scripts)
 * [Pomodoros and remind function](#pomodoros-and-remind-function)
 
+## Workaround alias
 
+Including a backslash in the middle of the word of a command prevents bash to use the alias
+
+```shell
+$ alias 'python3=echo kk'
+$ python3
+kk
+$ py\thon3
+Python 3.6.8 (default, Jun 23 2022, 19:01:59)
+[GCC 8.5.0 20210514 (Red Hat 8.5.0-13)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
 
 ## Comparing directories or files,
 
