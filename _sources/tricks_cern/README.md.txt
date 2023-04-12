@@ -6,6 +6,8 @@
 
 * [Cern docker images](#cern-docker-images)
 
+* [Outreach](#outreach)
+
 ## CVMFS
 
 Precompiled software is available in the read-only service `cvmfs`. Service can be installed during the installation of the operative system in case of CERN CentOS, or manually afterwards, installing the `locmap` packages and then enabling that service. Visit the [webpage](https://linux.web.cern.ch/centos7/docs/locmap/) for further details.
@@ -59,3 +61,9 @@ A virtual box with all the CERN appliances can be installed following the instru
 ## Cern docker images
 
 Docker images of CERN CentOS are available [here](https://linux.web.cern.ch/dockerimages/)
+
+## Outreach
+
+* [Overview](https://videos.cern.ch/record/2020780)
+
+* [CERN Youtube channel](https://youtu.be/pQhbhpU9Wrg)

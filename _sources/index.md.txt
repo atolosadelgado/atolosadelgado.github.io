@@ -13,5 +13,6 @@ This page gather those little tips and tricks that friends and coleagues showed 
     tricks_cern/README.md
     tricks_linux/README.md
     tricks_git/README.md
+    tricks_cpp/README.md
 
 ```
