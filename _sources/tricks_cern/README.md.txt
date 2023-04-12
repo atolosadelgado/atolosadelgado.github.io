@@ -2,11 +2,17 @@
 
 * [CVMFS](#cvmfs)
 
+* [HEP OS lib](#hep-os-lib)
+
 * [Cern Virtual Machine](#cernvm)
 
 * [Cern docker images](#cern-docker-images)
 
 * [Outreach](#outreach)
+
+## HEP OS lib
+
+Check this (link)[https://gitlab.cern.ch/linuxsupport/rpms/HEP_OSlibs/-/blob/ubuntu2204/README-ubuntu2204.md]. This lib will install all dependencies needed for HEP software.
 
 ## CVMFS
 
@@ -67,3 +73,5 @@ Docker images of CERN CentOS are available [here](https://linux.web.cern.ch/dock
 * [Overview](https://videos.cern.ch/record/2020780)
 
 * [CERN Youtube channel](https://youtu.be/pQhbhpU9Wrg)
+
+* [Map of the universe](https://mapoftheuniverse.net/)

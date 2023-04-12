@@ -99,3 +99,6 @@ git am file.patch
 ```
 And then commmit and push the changes to the remote branch.
 
+## Git bisect
+
+Check this (link)[https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination]. It can be used to isolate a bad commit.

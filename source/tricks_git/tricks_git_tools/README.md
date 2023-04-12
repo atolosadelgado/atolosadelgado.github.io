@@ -25,3 +25,15 @@ Shell alias can be an alternative to git alias configuration.
 There are many so called git clients available for these actions. One that can be found in standard linux software repositories is called `git gui`. Check for others as well
 
 Ancillary tools for git are tig, git gui. They are available in linux repos. The tig command shows the git logs, and a git alias can be used instead. As git client, git gui is one of many, check others as well!
+
+## Templates of CI/CD
+
+Check this (web)[https://repository.prace-ri.eu/git/help/ci/examples/index.md#cicd-templates]
+
+## Git LFS
+
+Check this (web)[https://docs.gitlab.com/ee/topics/git/lfs/]. Tldr: big files can be part of a repository without being tracked. This minimizes the size of the repo.
+
+## Git clang format
+
+Check HSF tutorials about Git. Check [git clang format](https://ortogonal.github.io/cpp/git-clang-format/)

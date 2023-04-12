@@ -47,12 +47,17 @@
 <h1><span class="section-number">1. </span>Tricks at CERN<a class="headerlink" href="#tricks-at-cern" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#cvmfs"><span class="std std-doc">CVMFS</span></a></p></li>
+<li><p><a class="reference internal" href="#hep-os-lib"><span class="std std-doc">HEP OS lib</span></a></p></li>
 <li><p><a class="reference internal" href="#cernvm"><span class="std std-doc">Cern Virtual Machine</span></a></p></li>
 <li><p><a class="reference internal" href="#cern-docker-images"><span class="std std-doc">Cern docker images</span></a></p></li>
 <li><p><a class="reference internal" href="#outreach"><span class="std std-doc">Outreach</span></a></p></li>
 </ul>
+<section id="hep-os-lib">
+<h2><span class="section-number">1.1. </span>HEP OS lib<a class="headerlink" href="#hep-os-lib" title="Permalink to this heading"></a></h2>
+<p>Check this (link)[https://gitlab.cern.ch/linuxsupport/rpms/HEP_OSlibs/-/blob/ubuntu2204/README-ubuntu2204.md]. This lib will install all dependencies needed for HEP software.</p>
+</section>
 <section id="cvmfs">
-<h2><span class="section-number">1.1. </span>CVMFS<a class="headerlink" href="#cvmfs" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.2. </span>CVMFS<a class="headerlink" href="#cvmfs" title="Permalink to this heading"></a></h2>
 <p>Precompiled software is available in the read-only service <code class="docutils literal notranslate"><span class="pre">cvmfs</span></code>. Service can be installed during the installation of the operative system in case of CERN CentOS, or manually afterwards, installing the <code class="docutils literal notranslate"><span class="pre">locmap</span></code> packages and then enabling that service. Visit the <a class="reference external" href="https://linux.web.cern.ch/centos7/docs/locmap/">webpage</a> for further details.</p>
 <p>There are two software builds of softare, <code class="docutils literal notranslate"><span class="pre">LGC</span></code> and <code class="docutils literal notranslate"><span class="pre">spack</span></code>. There is a daily built of each one, named <code class="docutils literal notranslate"><span class="pre">nightlies</span></code>, and a stable release. Each release may have a hash or version number which identify the status of the software at that time.</p>
 <p>Individual packages can be sourced from both <code class="docutils literal notranslate"><span class="pre">LGC</span></code> and <code class="docutils literal notranslate"><span class="pre">spack</span></code>. Alternatively, all the packages (around 1500) can be sourced with the following command</p>
@@ -91,18 +96,19 @@ x86_64-centos7-gcc7-dbg     x86_64-ubuntu2204-gcc11-opt
 </div>
 </section>
 <section id="cernvm">
-<h2><span class="section-number">1.2. </span>CernVM<a class="headerlink" href="#cernvm" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.3. </span>CernVM<a class="headerlink" href="#cernvm" title="Permalink to this heading"></a></h2>
 <p>A virtual box with all the CERN appliances can be installed following the instructions <a class="reference external" href="https://cernvm.cern.ch/fs/">here</a>.</p>
 </section>
 <section id="cern-docker-images">
-<h2><span class="section-number">1.3. </span>Cern docker images<a class="headerlink" href="#cern-docker-images" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.4. </span>Cern docker images<a class="headerlink" href="#cern-docker-images" title="Permalink to this heading"></a></h2>
 <p>Docker images of CERN CentOS are available <a class="reference external" href="https://linux.web.cern.ch/dockerimages/">here</a></p>
 </section>
 <section id="outreach">
-<h2><span class="section-number">1.4. </span>Outreach<a class="headerlink" href="#outreach" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.5. </span>Outreach<a class="headerlink" href="#outreach" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://videos.cern.ch/record/2020780">Overview</a></p></li>
 <li><p><a class="reference external" href="https://youtu.be/pQhbhpU9Wrg">CERN Youtube channel</a></p></li>
+<li><p><a class="reference external" href="https://mapoftheuniverse.net/">Map of the universe</a></p></li>
 </ul>
 </section>
 </section>

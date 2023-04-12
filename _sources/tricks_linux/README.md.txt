@@ -2,11 +2,30 @@
 
 Table of tricks :)
 
+* [Console file manager](#Console-file-manager)
+* [Remove path from env var](#remove-path-from-env-var)
 * [Comparing directories or files](#comparing-directories-or-files)
 * [Workaround alias](#workaround-alias)
 * [Find command with exec argument](#find-command-with-exec-argument)
 * [Encapsulate sourcing of scripts](#encapsulate-sourcing-of-scripts)
 * [Pomodoros and remind function](#pomodoros-and-remind-function)
+
+General Cheat sheet
+
+https://linuxcommandlibrary.com/
+
+## Console file manager
+
+Check this (link)[https://www.tecmint.com/linux-terminal-file-managers/]
+
+## Remove path from env var
+
+Check this (link)[https://stackoverflow.com/questions/11119203/how-to-remove-a-path-from-ld-library-path-in-tcsh]
+
+```
+LD_LIBRARY_PATH=$(echo $LD_LIBRARY_PATH | perl -pe "s[$DIR_TO_REMOVE][]g;")
+export LD_LIBRARY_PATH
+```
 
 ## Workaround alias
 
