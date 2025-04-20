@@ -19,7 +19,10 @@ jobs:
 
       - name: 📦 Install dependencies
         run: pip install -r requirements.txt
-
+      
+      - name: 🧹 Clean up previous build files
+        run: rm -rf build/*  # This will remove all files in the 'build' folder
+        
       - name: 🛠️ Build Sphinx HTML
         run: sphinx-build -b html source build
 
