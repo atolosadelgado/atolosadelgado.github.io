@@ -38,9 +38,9 @@ release = '0.0'
 # ones.
 extensions = [
     'myst_parser',
-    'sphinx_togglebutton',
-    'sphinx_copybutton',
-    'sphinx.ext.githubpages'
+    #'sphinx_togglebutton',
+    #'sphinx_copybutton',
+    #'sphinx.ext.githubpages'
 ]
 
 
