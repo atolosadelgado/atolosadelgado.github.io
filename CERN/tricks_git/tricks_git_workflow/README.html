@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.1. Git workflow &#8212; Odds and ends 0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../../_static/documentation_options.js?v=837179f8"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3.2. Git tools" href="../tricks_git_tools/README.html" />
+    <link rel="prev" title="3. Git tricks" href="../README.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="git-workflow">
+<h1><span class="section-number">3.1. </span>Git workflow<a class="headerlink" href="#git-workflow" title="Link to this heading">¶</a></h1>
+<p>The general repository shall be as clean as possible. To keep it in shape, master branch of the general repository (from now on, upstream repository), changes should be done from personal forks of that upstream repo and then ask the maintainers to merge your changes with the main repo. A brief summary of how to run it is given first, and the some other tips about issues that may happen during the general workflow.</p>
+<section id="general-workflow">
+<h2><span class="section-number">3.1.1. </span>General workflow<a class="headerlink" href="#general-workflow" title="Link to this heading">¶</a></h2>
+<p>When modifications to repo want to be made, the following steps must be made:</p>
+<ol class="arabic simple">
+<li><p>Create your personal repo as a fork, a copy of the original one (called upstream). This can be done using the web interface</p></li>
+<li><p>Download a local copy of your fork using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">...</span></code></p></li>
+<li><p>Within your personal repo cloned locally, you shall work on a particular branch. Same fork (personal repo) can have many branches at the same time. To create a new branch:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">branch</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Edit or add files (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">...</span></code>), commit and push them to the dedicated branch that was created in the previous step. The git client <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gui</span></code> is one of the many tools to visualize and simplify this step.</p></li>
+<li><p>Back in the web brower, go the working branch and ask for a pull / merge request to the upstream(main) branch. Add meaninful comments in the description for the reviewers.</p></li>
+</ol>
+</section>
+<section id="dry-run">
+<h2><span class="section-number">3.1.2. </span>Dry run<a class="headerlink" href="#dry-run" title="Link to this heading">¶</a></h2>
+<p>Remember that exist a dry run option when pushing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span> <span class="n">remote</span> <span class="n">origin</span>
+</pre></div>
+</div>
+</section>
+<section id="keep-your-fork-synchronized-with-upstream">
+<h2><span class="section-number">3.1.3. </span>Keep your fork synchronized with upstream<a class="headerlink" href="#keep-your-fork-synchronized-with-upstream" title="Link to this heading">¶</a></h2>
+<p>You should keep your fork copy synchronized with the upstream version. To do so, we can simply use the web interface or use <a class="reference external" href="https://stackoverflow.com/questions/7244321/how-do-i-update-or-sync-a-forked-repository-on-github" title="The following lines are taken from here">commands in the terminal</a>.</p>
+<ol class="arabic simple">
+<li><p>Add the remote, call it “upstream”:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">whoever</span><span class="o">/</span><span class="n">whatever</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Fetch all the branches of that remote into remote-tracking branches</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Make sure that you are on your master branch:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Rewrite your master branch so that any commits of yours that aren’t already in upstream/master are replayed on top of that other branch:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rebase</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>Check <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">github documentation</a> for futher details.</p>
+</section>
+<section id="amending-last-commit">
+<h2><span class="section-number">3.1.4. </span>Amending last commit<a class="headerlink" href="#amending-last-commit" title="Link to this heading">¶</a></h2>
+<p>There are two steps:</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gui</span></code>, o terminal to amend last commit as</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;John Doe &lt;john@doe.org&gt;&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>When pushing, add the following flag,</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w">  </span>--force-with-lease
+</pre></div>
+</div>
+<p>Check <a class="reference external" href="https://www.git-tower.com/learn/git/faq/change-author-name-email">this link</a> for further details about amending a commit.</p>
+</section>
+<section id="stashing-your-work">
+<h2><span class="section-number">3.1.5. </span>Stashing your work<a class="headerlink" href="#stashing-your-work" title="Link to this heading">¶</a></h2>
+<p>The content is a summary of <a class="reference external" href="https://www.atlassian.com/git/tutorials/saving-changes/git-stash">this page</a></p>
+<p>Stashing means to save the changes of staged and unstaged files apart, and revert the repository to the last commit.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>stash
+<span class="c1"># rebase/update/whatever</span>
+git<span class="w"> </span>stash<span class="w"> </span>pop
+</pre></div>
+</div>
+<p>The last command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">pop</span></code> will apply and delete the stashed change reference from the local repo. If the changes must be applied to several branches, other option can be used: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">apply</span></code>, which keeps that reference and allow reusing it.</p>
+<p>If untracked files shall be included in the stash reference, use the additional flag <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">-u</span></code>. If ignored files shall be included, use the additional flag <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">-a</span></code>.</p>
+</section>
+<section id="patching">
+<h2><span class="section-number">3.1.6. </span>Patching<a class="headerlink" href="#patching" title="Link to this heading">¶</a></h2>
+<p>When rebasing to the upstream/master branch, we may find merge conflicts. If they are simple, we may solve them manually. Sometimes it is easier to make a patch, that is, save the differences between your personal version and the remote version in a <em>patch file</em>, and apply the changes later.</p>
+<p>In order to generate the patch file, we use diff command. The <code class="docutils literal notranslate"><span class="pre">-N</span></code> argument is used to treat absent files as empty. The <code class="docutils literal notranslate"><span class="pre">-U</span></code> argument is used to produce such an output that can be understood by git later.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">U</span> <span class="n">file</span><span class="o">.</span><span class="n">original</span> <span class="n">file</span><span class="o">.</span><span class="n">changed</span> <span class="o">&gt;</span> <span class="n">file</span><span class="o">.</span><span class="n">patch</span>
+</pre></div>
+</div>
+<p>To patch manually a the file <code class="docutils literal notranslate"><span class="pre">file</span></code>, the patch command is used as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">patch</span> <span class="o">&lt;</span> <span class="n">file</span><span class="o">.</span><span class="n">patch</span>
+</pre></div>
+</div>
+<p>Later, we can apply those changes to a fresh copy of the remote repository</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">am</span> <span class="n">file</span><span class="o">.</span><span class="n">patch</span>
+</pre></div>
+</div>
+<p>And then commmit and push the changes to the remote branch.</p>
+</section>
+<section id="git-bisect">
+<h2><span class="section-number">3.1.7. </span>Git bisect<a class="headerlink" href="#git-bisect" title="Link to this heading">¶</a></h2>
+<p>Check this (link)[https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination]. It can be used to isolate a bad commit.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Odds and ends</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../README.html">CERN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Philosophy/README.html">A place to reflect</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../README.html">CERN</a><ul>
+  <li><a href="../README.html"><span class="section-number">3. </span>Git tricks</a><ul>
+      <li>Previous: <a href="../README.html" title="previous chapter"><span class="section-number">3. </span>Git tricks</a></li>
+      <li>Next: <a href="../tricks_git_tools/README.html" title="next chapter"><span class="section-number">3.2. </span>Git tools</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Alvaro Tolosa Delgado.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../../_sources/CERN/tricks_git/tricks_git_workflow/README.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
