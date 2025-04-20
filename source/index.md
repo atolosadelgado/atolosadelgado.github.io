@@ -1,18 +1,13 @@
-# Welcome to Tips and tricks at CERN!
-===================================================
-
-This page gather those little tips and tricks that friends and coleagues showed me over this time. 
+# A. personal space
+----
 
 ```{eval-rst}
 .. toctree::
-    :numbered:
     :maxdepth: 1
     :includehidden:
     :caption: Contents:
 
-    tricks_cern/README.md
-    tricks_linux/README.md
-    tricks_git/README.md
-    tricks_cpp/README.md
+    CERN/README.md
+    Philosophy/README.md
 
 ```
