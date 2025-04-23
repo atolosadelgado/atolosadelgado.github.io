@@ -12,5 +12,6 @@ This site gathers excerpts from deep conversations held in various settings, pri
     :caption: Contents:
 
     GenevaPubCafe/Cafe250419.md
+    GenevaPubCafe/Pub250423.md
 ```
 
