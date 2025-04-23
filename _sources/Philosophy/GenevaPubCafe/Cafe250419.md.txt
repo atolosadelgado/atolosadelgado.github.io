@@ -45,6 +45,73 @@ Several concepts related to physics were touched upon:
 ---
 
 ## Related books
-- Isaac Asimov, The Relativity of Wrong
-- Bertrand Russell, Human Knowledge: Its Scope and Limits
-- Immanuel Kant, Critique of Pure Reason
+
+1. Isaac Asimov – The Relativity of Wrong
+
+    Focus: A collection of essays on science, knowledge, and how "wrongness" can still be useful.
+
+    Perfect for discussing asymptotic knowledge and the value of incremental understanding—even when truth is never fully reached.
+
+2. Bertrand Russell – Human Knowledge: Its Scope and Limits
+
+    Focus: A systematic attempt to define the boundaries of what we can know.
+
+    Tackles epistemology head-on, blending logical analysis with scientific reasoning. Explores uncertainty, belief, and the justification of knowledge claims.
+
+3. Immanuel Kant – Critique of Pure Reason
+
+    Focus: The conditions of knowledge, perception, and the boundaries of reason.
+
+    A classic in philosophical thought, especially relevant to discussions about reality vs. representation, the unknown, and the role of internal models of the world.
+
+4. Jorge Luis Borges – Labyrinths
+
+    Focus: Infinite knowledge, paradoxes, mystery, and meaning.
+
+    Borges captures the feeling of mystery and the limits of understanding in a poetic, philosophical way.
+
+5. Karl Popper – The Logic of Scientific Discovery
+
+    Focus: Science advances by falsification, not by proving truths.
+
+    Addresses limits of knowledge, uncertainty, and how hypotheses shape what we "know."
+
+6. Michael Polanyi – Personal Knowledge
+
+    Focus: All knowledge is ultimately personal and shaped by tacit understanding.
+
+    Explores how subjectivity plays a role even in objective science.
+
+7. Carlo Rovelli – The Order of Time
+
+    Focus: Physics and the philosophical mystery of time.
+
+    Time, motion, and perception are central to your group’s questions. Rovelli is a physicist who writes with philosophical flair.
+
+    🧪 Scientist author
+
+8. Stuart Firestein – Ignorance: How It Drives Science
+
+    Focus: Science thrives not on what we know, but on what we don’t.
+
+    Explores how modeling ignorance is central to discovery.
+
+    🧪 Scientist author (neuroscientist)
+
+9. William James – The Varieties of Religious Experience
+
+    Focus: Subjective belief, faith, and mystery in lived experience.
+
+    Deep dive into faith, hope, and uncertainty—aligned with your mystery/faith discussion.
+
+10. Søren Kierkegaard – The Concept of Anxiety
+
+    Focus: Anxiety and the unknown as necessary parts of becoming fully human.
+
+    Mystery and existential unease as part of growth, not problems to solve.
+
+11. Edgar Morin – Method: Towards a Study of Humankind (Vol. 1: The Nature of Nature)
+
+    Focus: Complexity, uncertainty, and interdisciplinary knowledge.
+
+    Challenges reductionist views; argues for modeling the unknown within complexity theory.
