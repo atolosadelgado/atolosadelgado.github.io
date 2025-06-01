@@ -5,4 +5,4 @@
 #source venv/bin/activate
 #pip install -r requirements.txt
 
-sphinx-build -b html source .
+sphinx-build -b html source build
