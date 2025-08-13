@@ -15,6 +15,7 @@ This site gathers excerpts from deep conversations held in various settings, pri
     GenevaPubCafe/Pub250423.md
     GenevaPubCafe/Cafe250517.md
     GenevaPubCafe/Cafe250530.md
+    GenevaPubCafe/Cafe250810.md
     Sandbox/Machine250425.md
     Sandbox/Machine250428.md
     Sandbox/Machine250524.md
